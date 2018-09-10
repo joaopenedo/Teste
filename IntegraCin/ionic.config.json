@@ -1,0 +1,7 @@
+{
+  "name": "Integra_Cin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,100 @@
+<header >
+<ion-item id="itemum" >  
+  
+    <ion-icon (click)="openMenu" name="menu" id="icon1"></ion-icon>
+    <html id="telaInical">Integra Cin</html> 
+      
+
+  </ion-item>
+</header>
+<!--MENU LATERAL-->
+  <ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="openPage(homePage)">
+          Home
+        </button>
+        <button ion-item (click)="openPage(friendsPage)">
+          Friends
+        </button>
+        <button ion-item (click)="openPage()">
+          Eventos
+        </button>
+        <button ion-item (click)="closeMenu()">
+          Fechar Menu
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+  
+<!--MENU DIAGONAL NOME BOTÕES-->
+<div padding id="itemum">
+  <ion-segment [(ngModel)]="paginas">
+   
+    <ion-segment-button id="button" value="mapa">
+      Mapa      
+    </ion-segment-button>
+   
+    <ion-segment-button id="button" value="Eventos">
+      Eventos 
+    </ion-segment-button>
+
+    <ion-segment-button id="button" value="horarios">
+      Horários
+    </ion-segment-button>
+
+    <ion-segment-button id="button" value="infojunior">
+     Infojunior
+    </ion-segment-button>
+  
+  </ion-segment>
+</div>
+
+<!--PÁGINA DO MENU DIAGONAL-->
+<div [ngSwitch]="paginas">
+
+  <!--PÁGINA MAPA-->
+ 
+  <ion-list *ngSwitchCase="'mapa'">
+   
+    <ion-item>
+      
+    <img id="tamanho" src="assets/imgs/mapa.jpg" #myImage (click)="presentImage(myImage)"> 
+    </ion-item>        
+  </ion-list>
+
+
+ <!--PÁGINA EVENTOS-->
+  <ion-list *ngSwitchCase="'Eventos'">
+    <ion-item>               
+      <h2>Evento em construção</h2>
+    </ion-item>
+    </ion-list>
+    <!--PÁGINA HORÁRIOS-->
+    <ion-list *ngSwitchCase="'horarios'">
+      <ion-item>
+        <ion-thumbnail item-start>          
+        </ion-thumbnail>
+
+        <h2>Horario</h2>
+      </ion-item>
+      </ion-list>
+      <!--PÁGINA INFOJUNIOR-->
+      <ion-list *ngSwitchCase="'infojunior'">
+        <ion-item>
+          <ion-thumbnail item-start>           
+          </ion-thumbnail>
+          <ion-icon (click)="openMenu()" name="menu" ></ion-icon>
+          <h2>Infojunior</h2>
+        </ion-item>
+        </ion-list>
+        <h1>Bem Vindo oa IntegraCin!</h1>
+       <h2> Desenvolvido por João Vitor Penedo</h2>
+</div>
