@@ -1,12 +1,7 @@
 page-tela {
     
     
-    
-    #tamanho{
-        height:580px; 
-        margin-left: -10px;
-    }
-        
+            
       
     #itemum{
         background-color: #0B2F3A;
@@ -31,4 +26,36 @@ page-tela {
         color:white;
           
     }
+
+table.blueTable {
+
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+ /* border-collapse: collapse;*/
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid rgb(7, 70, 151);
+  padding: 50px 20px;
+}
+table.blueTable tbody td {
+  font-size: 15px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+    
 }

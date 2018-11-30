@@ -16,8 +16,8 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <button ion-item (click)="openPage(homePage)">
-          Home
+        <button ion-item (click)="openPage(telaPage)">
+          Tela inicial
         </button>
         <button ion-item (click)="openPage(friendsPage)">
           Friends
@@ -74,7 +74,27 @@
  <!--PÁGINA EVENTOS-->
   <ion-list *ngSwitchCase="'Eventos'">
     <ion-item>               
-      <h2>Evento em construção</h2>
+      <h2>
+          <table class="blueTable">
+              <tbody>
+              <tr >
+              <td  colspan="2">cell1_1</td>
+             
+              </tr>
+              <tr>
+              <td>
+                <h1>teste</h1>
+                <h2>Blá</h2>
+              </td>
+              <td>cell2_2</td>
+              </tr>
+                
+              </tbody>
+              
+              </table>
+    
+
+      </h2>
     </ion-item>
     </ion-list>
     <!--PÁGINA HORÁRIOS-->
@@ -95,6 +115,5 @@
           <h2>Infojunior</h2>
         </ion-item>
         </ion-list>
-        <h1>Bem Vindo oa IntegraCin!</h1>
-       <h2> Desenvolvido por João Vitor Penedo</h2>
+       
 </div>
